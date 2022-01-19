@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rellayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#111111"
+            android:textStyle="bold"
+            android:textSize="20pt"
+            android:text="temp" />
+
+        <TextView
+            android:id="@+id/tempdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/temp"
+            android:layout_alignBottom="@+id/temp"
+            android:layout_marginLeft="4dp"
+            android:text="sky"
+            android:textColor="#111111"
+            android:textSize="12pt" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/rellayout1"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/imgUp_ran"
+                android:elevation="15dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignRight="@+id/imgDown_ran"
+                android:layout_marginRight="120dp"
+                android:background="@drawable/circle_corner"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/imgDown_ran"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="15dp"
+                android:background="@drawable/circle_corner"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/imgOut_ran"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@+id/imgDown_ran"
+                android:layout_marginLeft="120dp"
+                android:elevation="15dp"
+                android:background="@drawable/circle_corner"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rellayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/dashboard_main_am"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:id="@+id/mainava"
+                app:srcCompat="@drawable/main"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                />
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:id="@+id/mainup"
+                app:srcCompat="@drawable/mainup"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+
+                />
+
+            <ImageView
+                android:elevation="15dp"
+                android:layout_marginTop="16dp"
+                android:id="@+id/maindown"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/maindown" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnshow"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text=" 전체 코디 >"
+        android:textColor="#EB723D"
+        android:textStyle="bold"
+        android:background="#00ff0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottomnavigationview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

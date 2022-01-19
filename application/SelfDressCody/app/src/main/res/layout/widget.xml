@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_margin="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE0B2">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/headava"   />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:id="@+id/upava"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/upava"    />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="450dp"
+                android:id="@+id/downava"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/downava"   />
+
+            <ImageView
+                android:id="@+id/imgUp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_background_dashboard1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/imgDown"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imgUp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="24dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:background="@drawable/button_background_dashboard1"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

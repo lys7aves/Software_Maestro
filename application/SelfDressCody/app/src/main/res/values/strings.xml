@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SDC_0.4.0</string>
+
+    <string name="naver_client_id">pQxFaqmYRQDbYS5u2QQ4</string>
+    <string name="naver_client_secret">E3UrujWH1i</string>
+    <string name="naver_client_name">SelfDressCody</string>
+</resources>

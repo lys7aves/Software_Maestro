@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutOOO"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1F1F1F">
+
+    <RelativeLayout
+        android:id="@+id/layout11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="옷의 색을 터치해주세요"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"  />
+
+        <ImageView
+            android:id="@+id/btnChoose"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_addblack"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout11"
+        tools:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textupdown"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#111111"
+        android:text="옷 종류"
+        android:textStyle="bold"
+        android:textSize="8pt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/radio_type1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_left"
+        android:layout_marginTop="8dp"
+        android:text="상의"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textupdown"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"   />
+
+    <Button
+        android:id="@+id/radio_type2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="하의"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textupdown"
+        app:layout_constraintStart_toEndOf="@+id/radio_type1"
+           />
+
+    <Button
+        android:id="@+id/radio_type3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="외투"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textupdown"
+        app:layout_constraintStart_toEndOf="@+id/radio_type2"
+        />
+
+    <TextView
+        android:id="@+id/textwinter"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#111111"
+        android:text="옷 계절"
+        android:textStyle="bold"
+        android:textSize="8pt"
+        app:layout_constraintTop_toBottomOf="@+id/radio_type1"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/radio_spring"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="봄"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textwinter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/radio_summer"
+           />
+
+    <Button
+        android:id="@+id/radio_summer"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="여름"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textwinter"
+        app:layout_constraintStart_toEndOf="@+id/radio_spring"
+        app:layout_constraintEnd_toStartOf="@+id/radio_autumn"
+        />
+
+    <Button
+        android:id="@+id/radio_autumn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="가을"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textwinter"
+        app:layout_constraintStart_toEndOf="@+id/radio_summer"
+        app:layout_constraintEnd_toStartOf="@+id/radio_winter"
+        />
+
+    <Button
+        android:id="@+id/radio_winter"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/button_radio_center"
+        android:layout_marginTop="8dp"
+        android:text="겨울"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        app:layout_constraintTop_toBottomOf="@+id/textwinter"
+        app:layout_constraintStart_toEndOf="@+id/radio_autumn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+        />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5E5D5D"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

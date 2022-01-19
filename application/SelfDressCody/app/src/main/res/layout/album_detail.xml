@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1313"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bg"
+        app:behavior_hideable="false"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_maximize_24" />
+
+        <ImageView
+            android:id="@+id/image_detail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/image_detail"
+             />
+
+        <TextView
+            android:id="@+id/text_vivid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@+id/image_detail"
+            android:text="vivid색"
+            android:textColor="#1565C0"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layout123"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/image_detail"
+            android:layout_marginTop="16dp"
+            >
+
+            <Button
+                android:id="@+id/rel_spr"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_dashboard2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:text="봄"
+                />
+
+            <Button
+                android:id="@+id/rel_sum"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background_dashboard2"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="여름"
+                />
+            <Button
+                android:id="@+id/rel_aut"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background_dashboard2"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="가을"
+                />
+            <Button
+                android:id="@+id/rel_win"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background_dashboard2"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:text="겨울"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detail_this"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout123"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:text="#이런 옷과 잘 어울려요"
+            android:textColor="#1565C0"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/image_detail_match"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_below="@+id/image_detail"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            tools:src="@mipmap/ic_launcher" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_below="@+id/layout123"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewPager"
+            android:layout_marginTop="80dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
